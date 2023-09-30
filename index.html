@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Gcode</title>
+    <meta charset="UTF-8" />
+    <script>
+      // JavaScript code to add the CSS class when scrolling
+      window.addEventListener("scroll", function () {
+        var header = document.getElementById("site-header");
+        if (window.scrollY > 0) {
+          header.classList.add("header-shadow");
+        } else {
+          header.classList.remove("header-shadow");
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <header id="site-header">
+      <div class="bar"><g>G</g><c>C</c><o>o</o><!-- <oo>o</oo> --><d>d</d><e>e</e>
+
+        <div class="search">
+          <input type="text" placeholder="Search.." name="search">
+        </div>
+    
+    </div>
+    </header>
+    <div class="container">
+      <br /><br /><br /><br /><br />
+      <h1>Gcode for git babe community.</h1>
+      <br />
+      <br />
+      <p>
+        Easy Learning with HTML "GRun online" With our "GRun online" editor, you
+        can edit the HTML code and view the result: <br />
+        <br />
+
+        <b>General - </b> it is common for every c++ program a similar Base
+        programme. therefore think connectively and study the basic of html tag
+        also such as container tags basic heading tags img tag and attributes
+        table and the List tags
+      </p>
+
+      <p id="up"></p>
+      <div>
+        <ul>
+          <li>
+            Design a simple and Attractive web page for kerala tourism , it
+            should contain (background color or image , headings , text
+            formating and font tags , images etc.)
+          </li>
+        </ul>
+
+        <div class="box">
+          <div class="clearfix">
+            <div class="pleft">
+              <h2 id="html">Basic html.</h2>
+            </div>
+            <div class="clip main">
+              <button
+                type="button btn-copy"
+                id="copy-button"
+                data-clipboard-target="#html-base"
+                class="btn btn-primary"
+              >
+                &nbsp;&nbsp;Copy code
+              </button>
+            </div>
+          </div>
+
+          <pre id="html-base" class="html-code code">
+<span class="l"> </span> 
+<span class="l"> </span>   &#60;html&#62;
+<span class="l"> </span>    &lt;head&gt;
+<span class="l"> </span>       &lt;title&gt;Table&lt;&#47;title&gt;
+<span class="l"> </span>     &lt;&#47;head&gt;
+<span class="l"> </span>
+<span class="l"> </span>    &#60;body bgcolor="<i>color</i>"&#62; 
+<span class="l"> </span>
+<span class="l"> </span>
+<span class="l"> </span>
+<span class="l"> </span>
+<span class="l">  </span>    &lt;&#47;body&gt; 
+<span class="l">  </span> &lt;&#47;html&gt; 
+<span class="l"> </span>
+</pre>
+          <br /><br /><br />
+          <p>
+            It is the base of html code learn the different attributes of tag
+            give preiority to the following tas Img tag , table tag , list tags
+            , atttributes of body tag etc.<br />
+            <br />
+            below some of selected questions syntax.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("pre").each(function (i, block) {
+          hljs.highlightBlock(block);
+        });
+      });
+
+      $(document).ready(function () {
+        new Clipboard("#copy-button", {
+          text: function (trigger) {
+            var str = $(trigger).closest(".panel").find("pre").text();
+            return str.replace(/ /g, "");
+          },
+        });
+      });
+    </script>
+
+    <script>
+      const copyButtons = document.querySelectorAll(".btn-primary");
+
+      copyButtons.forEach(function (copyButton) {
+        copyButton.addEventListener("click", function () {
+          let target = copyButton;
+          let range = document.createRange();
+          range.selectNode(target);
+          window.getSelection().removeAllRanges();
+          window.getSelection().addRange(range);
+          document.execCommand("copy");
+          window.getSelection().removeAllRanges();
+          copyButton.textContent = "Copied!";
+        });
+      });
+    </script>
+    <style>
+      .fontawesomesvg {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.125em;
+      }
+    </style>
+  </body>
+</html>
